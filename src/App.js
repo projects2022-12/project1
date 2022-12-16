@@ -43,7 +43,7 @@ class App extends Component {
             </div>
             <div>
             {/*<label for="2">Password: </label>*/}
-            <input required type="password" name="password" value={password} onChange={this.onChange} placeholder="Password" id="2"></input>
+            <input minLength="8" required type="password" name="password" value={password} onChange={this.onChange} placeholder="Password" id="2"></input>
             </div>
             <button type="submit">Done</button>
             </form>

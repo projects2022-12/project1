@@ -22,8 +22,8 @@ class Register extends Component {
         e.preventDefault();
         const { email, password, passwordConfirmation } = this.state;
         
-        if (password === passwordConfirmation) {
-        axios.post('http://localhost:3000/api/register/', { email, password })
+        if (password === passwordConfirmation && password) {
+        axios.post('http://localhost:5000/api/register/', { email, password })
         .then((result) => {
             
             this.props.history.push("/");
@@ -45,10 +45,10 @@ class Register extends Component {
             <input required type="email" name="email" value={email} onChange={this.onChange} placeholder="Email"></input>
             </div>
             <div>
-            <input required type="password" name="password" value={password} onChange={this.onChange} placeholder="Password"></input>
+            <input minLength="8" required type="password" name="password" value={password} onChange={this.onChange} placeholder="Password"></input>
             </div>
             <div>
-            <input required type="password" name="passwordConfirmation" value={passwordConfirmation} onChange={this.onChange} placeholder="Password Confirmation"></input>
+            <input minLength="8" required type="password" name="passwordConfirmation" value={passwordConfirmation} onChange={this.onChange} placeholder="Password Confirmation"></input>
             </div>
             <button type="submit">Done</button>
             </form>
