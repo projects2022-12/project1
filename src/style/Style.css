@@ -1,0 +1,18 @@
+body {
+	background-color: lightblue;
+}
+
+input {
+	margin-bottom: 0.1em;
+	font-size: 2em;
+}
+
+button {
+	font-size: 2em;
+	margin-top: 0.5cm;
+	margin-bottom: 0.5cm;
+}
+
+h3 {
+	font-size: 2em;
+}
