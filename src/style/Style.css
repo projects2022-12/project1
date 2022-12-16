@@ -11,6 +11,9 @@ button {
 	font-size: 2em;
 	margin-top: 0.5cm;
 	margin-bottom: 0.5cm;
+	border-radius: 0.3em;
+	color: green;
+	font-weight: bold;
 }
 
 h3 {
