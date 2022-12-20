@@ -6,6 +6,7 @@ class Register extends Component {
     constructor() {
         super();
         this.state = {
+            userName: '',
             email: '',
             password: '',
             passwordConfirmation: ''
@@ -20,13 +21,12 @@ class Register extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        const { email, password, passwordConfirmation } = this.state;
+        const { userName, email, password, passwordConfirmation } = this.state;
         
-        if (password === passwordConfirmation && password) {
-        axios.post('http://localhost:5000/api/register/', { email, password })
+        if (password === passwordConfirmation) {
+        axios.post('http://localhost:5126/useritems', { userName, email, password })
         .then((result) => {
             
-            this.props.history.push("/");
             } 
         );
         } else {
@@ -35,12 +35,15 @@ class Register extends Component {
     }
 
     render() {
-        const { email, password, passwordConfirmation } = this.state;
+        const { userName, email, password, passwordConfirmation } = this.state;
         return (
         <main>
             <h3><Link to="/">Main Page</Link></h3>
 
             <form onSubmit={this.onSubmit}>
+            <div>
+            <input required type="text" name="userName" value={userName} onChange={this.onChange} placeholder="Username"></input>
+            </div>
             <div>
             <input required type="email" name="email" value={email} onChange={this.onChange} placeholder="Email"></input>
             </div>
