@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 class App extends Component {
     constructor() {
@@ -45,7 +46,7 @@ class App extends Component {
             {/*<label for="2">Password: </label>*/}
             <input minLength="8" required type="password" name="password" value={password} onChange={this.onChange} placeholder="Password" id="2"></input>
             </div>
-            <button type="submit">Done</button>
+            <Button variant="primary" type="submit">Done</Button>
             </form>
         </main>
         );
