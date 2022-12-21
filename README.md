@@ -1,5 +1,6 @@
 npm add react-router-dom
 npm install axios
+npm install react-bootstrap bootstrap
 git push git@github.com:projects2022-12/project1.git
 
 

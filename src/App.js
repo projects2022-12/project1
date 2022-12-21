@@ -23,7 +23,7 @@ class App extends Component {
         
         const { email, password } = this.state;
         
-        axios.get('http://localhost:3000/'+ this.props.match.params.id+ '/', { email, password })
+        axios.get('http://localhost:5126/useritems/'+ this.props.match.params.id+ '/', { email, password })
         .then((result) => {
             
             this.props.history.get("/show/"+this.props.match.params.id)
