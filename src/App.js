@@ -35,9 +35,10 @@ class App extends Component {
         return (
 	    
         <main>
-            <h3><Link to="/register">Register</Link></h3>
+            <h4><Link to="/register">Register</Link></h4>
 
             <form onSubmit={this.onSubmit}>
+            <h3>Login</h3>
             <div>
             {/*<label for="1">Email: </label>*/}
             <input required type="email" name="email" value={email} onChange={this.onChange} placeholder="Email" id="1"></input>
@@ -46,7 +47,7 @@ class App extends Component {
             {/*<label for="2">Password: </label>*/}
             <input minLength="8" required type="password" name="password" value={password} onChange={this.onChange} placeholder="Password" id="2"></input>
             </div>
-            <Button variant="primary" type="submit">Done</Button>
+            <Button variant="primary" type="submit">Log in</Button>
             </form>
         </main>
         );

@@ -39,9 +39,10 @@ class Register extends Component {
         const { userName, email, password, passwordConfirmation } = this.state;
         return (
         <main>
-            <h3><Link to="/">Main Page</Link></h3>
+            <h4><Link to="/">Main Page</Link></h4>
 
             <form onSubmit={this.onSubmit}>
+            <h3>Register</h3>
             <div>
             <input required type="text" name="userName" value={userName} onChange={this.onChange} placeholder="Username"></input>
             </div>
@@ -54,7 +55,7 @@ class Register extends Component {
             <div>
             <input minLength="8" required type="password" name="passwordConfirmation" value={passwordConfirmation} onChange={this.onChange} placeholder="Password Confirmation"></input>
             </div>
-            <Button variant="primary" type="submit">Done</Button>
+            <Button variant="primary" type="submit">Register</Button>
             </form>
         </main>
         );
