@@ -41,7 +41,7 @@ class App extends Component {
             <h3>Login</h3>
             <div>
             {/*<label for="1">Email: </label>*/}
-            <input required type="email" name="email" value={email} onChange={this.onChange} placeholder="Email" id="1"></input>
+            <input autofocus="true" required type="email" name="email" value={email} onChange={this.onChange} placeholder="Email" id="1"></input>
             </div>
             <div>
             {/*<label for="2">Password: </label>*/}

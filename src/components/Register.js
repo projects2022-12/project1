@@ -44,7 +44,7 @@ class Register extends Component {
             <form onSubmit={this.onSubmit}>
             <h3>Register</h3>
             <div>
-            <input required type="text" name="userName" value={userName} onChange={this.onChange} placeholder="Username"></input>
+            <input autofocus="true" required type="text" name="userName" value={userName} onChange={this.onChange} placeholder="Username"></input>
             </div>
             <div>
             <input required type="email" name="email" value={email} onChange={this.onChange} placeholder="Email"></input>
